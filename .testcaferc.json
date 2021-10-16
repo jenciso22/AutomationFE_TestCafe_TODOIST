@@ -1,0 +1,8 @@
+
+{
+    "screenshotPath": "./screenshots",
+    "screenshotPathPattern": "${DATE}_${TIME}/${FIXTURE}.png",
+    "assertionTimeout": 5000,
+    "skipJsErrors": true
+}
+

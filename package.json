@@ -1,0 +1,46 @@
+{
+  "name": "testcafe_automation",
+  "version": "1.0.0",
+  "description": "TODOIST - Automation testing with TestCafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true",
+    "test:report:json": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter json",
+    "test:report:xunit": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter xunit",
+    "test:report:list": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter list",
+    "test:report:nunit": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter nunit",
+    "test:report:html": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --skip-js-errors --reporter html:reports/html/POMReports.html",
+    "test:headless": "testcafe chrome:headless ./page_objects/tests/ -s takeOnFails=true",
+    "test:headless:5": "testcafe -c 5 chrome:headless ./page_objects/tests/ -s takeOnFails=true",
+    "test:smoke:testing": "testcafe chrome ./page_objects/tests/ --test-meta type=smoke",
+    "test:login": "testcafe chrome ./page_objects/tests/Login.test.js -s takeOnFails=true",
+    "test:task": "testcafe chrome ./page_objects/tests/Task.test.js -s takeOnFails=true",
+    "test:project": "testcafe chrome ./page_objects/tests/Project.test.js -s takeOnFails=true",
+    "test:loginConcurrency": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --concurrency 2",
+    "test:chrome": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true",
+    "test:safari": "testcafe safari ./page_objects/tests/ -s takeOnFails=true",
+    "test:firefox": "testcafe firefox ./page_objects/tests/ -s takeOnFails=true"
+  },
+  "keywords": [
+    "TestCafe",
+    "Automation",
+    "Todoist"
+  ],
+  "author": "Jose Enciso",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
+    "nanoid": "^3.1.30",
+    "prettier": "^2.4.1",
+    "testcafe": "^1.16.1",
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-json": "^2.2.0",
+    "testcafe-reporter-list": "^2.1.0",
+    "testcafe-reporter-nunit": "^0.1.2",
+    "testcafe-reporter-xunit": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1"
+  }
+}
