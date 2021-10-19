@@ -19,7 +19,8 @@
     "test:loginConcurrency": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --concurrency 2",
     "test:chrome": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true",
     "test:safari": "testcafe safari ./page_objects/tests/ -s takeOnFails=true",
-    "test:firefox": "testcafe firefox ./page_objects/tests/ -s takeOnFails=true"
+    "test:firefox": "testcafe firefox ./page_objects/tests/ -s takeOnFails=true",
+    "lint-init": "eslint --init"
   },
   "keywords": [
     "TestCafe",
@@ -30,6 +31,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "eslint-plugin-testcafe": "^0.2.1",
     "faker": "^5.5.3",
     "nanoid": "^3.1.30",
     "prettier": "^2.4.1",
