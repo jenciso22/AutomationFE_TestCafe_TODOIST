@@ -1,4 +1,3 @@
-import { Selector, t  } from "testcafe";
 import { URLS, projectNamed } from "../data/Constants";
 import { STANDARD_USER } from '../data/Roles'
 import commonPage from "../pages/CommonPage";
@@ -22,9 +21,7 @@ test.after(async t =>{
         .click(commonPage.projectDeleteButton)
         .click(commonPage.projectSubmitDelete)
 
-})
-
-('As a user, I should be able to create a New Project', async t => {
+})('As a user, I should be able to create a New Project', async t => {
     await commonPage.createNewProject(projectNamed)
     await t.expect(commonPage.projectSection.withText(projectNamed).exists).ok()
 }).meta(
