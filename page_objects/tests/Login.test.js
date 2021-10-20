@@ -21,8 +21,15 @@ test('As a user, I should not be able to log in successfully by providing invali
 
 test('As a user, I should not be able to log in successfully by providing invalid email', async t => {
 
-    await loginPage.submitLoginForm(INVALIDCREDENTIALS.INVALID_USER.INVALIDEMAIL, INVALIDCREDENTIALS.INVALID_USER.PASSWORD)
+    await loginPage.submitLoginForm(INVALIDCREDENTIALS.INVALID_USER.INVALIDEMAIL, CREDENTIALS.STANDARD_USER.PASSWORD)
     await t.expect(loginPage.errorMessage.innerText).contains('Invalid email address.')
+    
+})
+
+test('As a user, I should not be able to log in successfully by providing invalid password', async t => {
+
+    await loginPage.submitLoginForm(CREDENTIALS.STANDARD_USER.EMAIL, INVALIDCREDENTIALS.INVALID_USER.INVALIDPASSWORD)
+    await t.expect(loginPage.errorMessage.innerText).contains('Wrong email or password.')
     
 })
 
