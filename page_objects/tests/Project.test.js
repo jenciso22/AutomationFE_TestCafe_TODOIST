@@ -12,7 +12,7 @@ fixture('Project feature test')
 
 .beforeEach(async t => {
     await t.useRole(STANDARD_USER)
-    await t.setTestSpeed(0.7)
+    await t.setTestSpeed(.8)
 })
 
 test.after(async t =>{
@@ -20,6 +20,7 @@ test.after(async t =>{
         .click(commonPage.projectOptionMenu)
         .click(commonPage.projectDeleteButton)
         .click(commonPage.projectSubmitDelete)
+        .wait(1500)
 
 })('As a user, I should be able to create a New Project', async t => {
     await commonPage.createNewProject(projectNamed)

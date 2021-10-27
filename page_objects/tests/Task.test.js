@@ -14,7 +14,7 @@ fixture('Task feature test')
 .beforeEach (async t => {
     await t.useRole(STANDARD_USER)
     await t.maximizeWindow()
-    await t.setTestSpeed(0.5)
+    await t.setTestSpeed(1)
 })
 
 
@@ -52,7 +52,9 @@ test.after(async t =>{
             .click(todayPage.moreTaskAction)
             .click(todayPage.deleTask)
             .click(todayPage.submitdeleTask)
+            .wait(1500)
   })('As a user, I should be able to create a new task for tomorrow with valid name', async t => {
+    await t.setTestSpeed(0.7)
     await todayPage.createTomorrowTask(taskName, taskDesc)
     await t.click(inboxPage.inboxFilter)
     const newTaskName = await todayPage.getLastTaskName()
@@ -72,6 +74,7 @@ test.after(async t =>{
             .click(todayPage.submitdeleTask)
         }
   })('As a user, I should be able to create 10 tasks with different name', async t => {
+    // await t.setTestSpeed(1)
     await todayPage.createNewTask(taskName, taskDesc)
     const newTaskName = await todayPage.getLastTaskName()
     await t.expect(newTaskName).eql(taskName)

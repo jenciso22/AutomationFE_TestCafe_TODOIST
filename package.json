@@ -7,6 +7,7 @@
     "test": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true",
     "test:report:json": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter json",
     "test:report:xunit": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter xunit",
+    "test:report:xunits": "testcafe chrome:headless ./page_objects/tests/ -s takeOnFails=true --reporter xunit:reports/xml/res.xml",
     "test:report:list": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter list",
     "test:report:nunit": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --reporter nunit",
     "test:report:html": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --skip-js-errors --reporter html:reports/html/POMReports.html",

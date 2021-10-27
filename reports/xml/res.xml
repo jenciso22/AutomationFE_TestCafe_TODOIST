@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 95.0.4638.54 / macOS 10.15.7" tests="11" failures="1" skipped="0" errors="1" time="238.779" timestamp="Wed, 27 Oct 2021 18:13:53 GMT" >
+  <testcase classname="Login feature test" name="As a user, I should not be able to log in successfully by providing invalid credentials" time="2.82">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should not be able to log in successfully by providing invalid email" time="1.682">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should not be able to log in successfully by providing invalid password" time="2.267">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should not be able to log in successfully by providing Blank Password" time="1.689">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should be able to log in successfully by providing valid credentials" time="7.009">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should be able to log in successfully by providing valid credentials (With ROLE)" time="7.135">
+  </testcase>
+  <testcase classname="Project feature test" name="As a user, I should be able to create a New Project" time="15.07">
+  </testcase>
+  <testcase classname="Task feature test" name="As a user, I should be able to create a new task with valid name (screenshots: /Users/william.enciso/Desktop/Courses/QA BOOTCAMP/Exercises/testcafe_automation/screenshots/2021-10-27_13-09-53/Task feature test.png)" time="27.01">
+    <failure>
+    <![CDATA[
+      1) - Error in test.after hook -
+         The specified selector does not match any element in the DOM tree.
+
+          > | Selector('.more_actions_button')
+
+         Browser: Chrome 95.0.4638.54 / macOS 10.15.7
+         Screenshot: /Users/william.enciso/Desktop/Courses/QA
+      BOOTCAMP/Exercises/testcafe_automation/screenshots/2021-10-27_13-09-53/Task feature test.png
+
+            19 |
+            20 |
+            21 |test.after(async t =>{
+            22 |    await t
+            23 |        .hover(todayPage.taskItem)
+          > 24 |        .click(todayPage.moreTaskAction)
+            25 |        .click(todayPage.deleTask)
+            26 |        .click(todayPage.submitdeleTask)
+            27 |})('As a user, I should be able to create a new task with valid name', async t => {
+            28 |    await todayPage.createNewTask(taskName, taskDesc)
+            29 |    await t.expect(todayPage.taskName.withText(taskName).exists).ok()
+
+            at <anonymous> (/Users/william.enciso/Desktop/Courses/QA
+      BOOTCAMP/Exercises/testcafe_automation/page_objects/tests/Task.test.js:24:10)
+            at asyncGeneratorStep (/Users/william.enciso/Desktop/Courses/QA
+      BOOTCAMP/Exercises/testcafe_automation/page_objects/tests/Task.test.js:5:265)
+            at _next (/Users/william.enciso/Desktop/Courses/QA
+      BOOTCAMP/Exercises/testcafe_automation/page_objects/tests/Task.test.js:5:603)
+            at <anonymous> (/Users/william.enciso/Desktop/Courses/QA
+      BOOTCAMP/Exercises/testcafe_automation/page_objects/tests/Task.test.js:5:768)
+            at <anonymous> (/Users/william.enciso/Desktop/Courses/QA
+      BOOTCAMP/Exercises/testcafe_automation/page_objects/tests/Task.test.js:5:509)
+            at <anonymous> (/Users/william.enciso/Desktop/Courses/QA
+      BOOTCAMP/Exercises/testcafe_automation/page_objects/tests/Task.test.js:21:1)
+    ]]>
+    </failure>
+  </testcase>
+  <testcase classname="Task feature test" name="As a user, I should be able to create a new task with Different Name" time="20.012">
+  </testcase>
+  <testcase classname="Task feature test" name="As a user, I should be able to create a new task for tomorrow with valid name" time="25.312">
+  </testcase>
+  <testcase classname="Task feature test" name="As a user, I should be able to create 10 tasks with different name" time="128.675">
+  </testcase>
+</testsuite>
