@@ -14,6 +14,7 @@
     "test:headless": "testcafe chrome:headless ./page_objects/tests/ -s takeOnFails=true",
     "test:headless:5": "testcafe -c 5 chrome:headless ./page_objects/tests/ -s takeOnFails=true",
     "test:smoke:testing": "testcafe chrome ./page_objects/tests/ --test-meta type=smoke",
+    "test:smoke:testingh": "testcafe chrome:headless ./page_objects/tests/ --test-meta type=smoke -s takeOnFails=true --reporter xunit:reports/xml/res.xml",
     "test:login": "testcafe chrome ./page_objects/tests/Login.test.js -s takeOnFails=true",
     "test:task": "testcafe chrome ./page_objects/tests/Task.test.js -s takeOnFails=true",
     "test:project": "testcafe chrome ./page_objects/tests/Project.test.js -s takeOnFails=true",
