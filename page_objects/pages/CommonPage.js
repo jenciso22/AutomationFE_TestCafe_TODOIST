@@ -22,7 +22,7 @@ class CommonPage{
         this.projectDropdownCoolor = Selector ('button[type="button"].color_dropdown_toggle')
         this.projectColor = Selector ('li:nth-child(17) > span.color_dropdown_select__name')
         this.projectOptionMenu = Selector ('button[aria-label="Project options menu"]')
-        this.projectDeleteButton = Selector ('.project_view_menu > .icon_menu_item:nth-child(16)')
+        this.projectDeleteButton = Selector ('.project_view_menu > .icon_menu_item:nth-child(15)')
         this.projectSubmitDelete = Selector('.confirm_dialog__actions > button:nth-child(1)')
 
 
